@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      anxiety: 不安
+      category: カテゴリー
+    attributes:
+      anxiety:
+        content: 不安
+        think: 思考
+        feeling: 感覚
+        physical: 体調
+        action: 行動
+      category:
+        name: カテゴリー名

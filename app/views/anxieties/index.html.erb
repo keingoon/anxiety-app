@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>日付ごとの不安一覧</h1>
+  <!--<p>日付ごとの不安をチェックして、不安を解決しよう！</p>-->
+
+  <% @anxieties_each_day_hash.each do |key, values| %>
+    <div class="card border-dark mb-3">
+    <!--  ここに日付を表示する -->
+      <h5 class="card-header"><%= key %></h5>
+      <ul class="list-group list-group-flush">
+        <% values.each do |v| %>
+        <!--  ここに不安を表示する -->
+          <li class="list-group-item">
+            <%= link_to(anxiety_path(v), class: 'list-content') do %>
+              <%= v.content %>
+              <p class="card-text"><small class="text-muted"><%= I18n.l(v.created_at, format: :long) %></small></p>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

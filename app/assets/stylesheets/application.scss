@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+.list-group-item:hover{
+  background: #CBFFD3;
+  /*background: url(マウスオーバー時に表示させたい背景画像のURL) no-repeat;*/
+}
+
+.list-content{
+  color: #FF9872;
+  &:hover{
+    color: #FF9872;
+  }
+}
+
+.list-content:link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submit-button{
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-category-button{
+  // 縦に積む
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // 中央寄せ
+  justify-content: center;
+  align-items: center;
+}
+
+.category-button-group{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-button{
+  flex-basis: 50% !important;
+  border-radius: 80% !important;
+}
+
+.category-add-button{
+  color: gray;
+}
+
+.select-category-box, .add-category-box{
+  margin: 15px auto;
+  h5{
+    text-align: center;
+  }
+}
+
+.fa-plus-square{
+  cursor : pointer;
+  &:hover{
+    color: #0099FF;
+    transform: translate3d(0, 3px, 0);
+  }
+}
+
+// formのlabelを中央寄せするCSS
+.formpart{
+  text-align: center;
+}
+
+.formcard{
+  background-color: #CEF9DC;
+  transition: background-color 1s ease-in-out, transform 1s ease-in, border-radius 1s ease-in;
+  &:hover{
+    background-color: #33CC99;
+    transform: scale(1.05);
+    border-radius: 5%;
+  }
+}

@@ -1,0 +1,18 @@
+//FormMessageのアニメーション
+ .form-message-part-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+ .form-message-part-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1s, transform 1s;
+}
+ .form-message-part-exit {
+  opacity: 1;
+}
+ .form-message-part-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s, transform 1s;
+}
