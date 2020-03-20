@@ -40,8 +40,10 @@ class AnxietiesIndex extends React.Component {
     //ListGroupで不安をリスト表示するまとめ
     const anxietes_each = anxieties.map((anxiety) => {
       return (
-        <ListGroup variant="flush">
-          <ListGroup.Item>{anxiety.content}</ListGroup.Item>
+        <ListGroup variant="flush" key={anxiety.id}>
+          <ListGroup.Item key={anxiety.id}>{anxiety.content}</ListGroup.Item>
+          <small className="text-muted">{anxiety.time_of_created_at}</small>
+          <br/>
         </ListGroup>
       )
     });
@@ -58,13 +60,13 @@ class AnxietiesIndex extends React.Component {
     const anxieties_each_day = this.state.anxieties_each_day;
     const anxieties_each_day_show = Object.keys(anxieties_each_day).map((day) => {
       return (
-        <Card style={{ width: '18rem' }}>
+        <Card>
           <Card.Header>{day}</Card.Header>
           {this.anxieties_each_render(anxieties_each_day[day])}
         </Card>
       )
     });
-  
+
     return (
       <>
         <ErrorBoundary>
